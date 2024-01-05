@@ -1,0 +1,301 @@
+body {
+    background: #0015b5da;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 100%;
+    background: url('flor.png');
+    filter: drop-shadow(2px 4px 8px rgb(255, 255, 255));
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+#header {
+    text-align: center;
+    position: fixed;
+    top: -10px;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 4px 2px rgba(255, 255, 255, 0.711);
+    z-index: 999;
+}
+#header1 {
+    text-align: center;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 4px 2px rgba(255, 255, 255, 0.711);
+    z-index: 999;
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(156, 197, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.47), rgb(4, 0, 255), rgba(0, 0, 0, 0.47));
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 4px 4px 2px rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    z-index: 9999;
+}
+.Inicio {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 4px 4px 2px rgb(0, 0, 0);
+}
+h1{
+    filter: drop-shadow(4px 4px 2px black);
+}
+button:hover {
+    background-color: #0a82fa;
+}
+input{
+    background: black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 8px;
+    margin-top: 5px;
+    color: white;
+}
+.derecha {
+    background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(4, 0, 255), rgb(0, 0, 0));
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    height: auto;
+    width: 150px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 0 0 1100px;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+
+.izquierda {
+    background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(4, 0, 255), rgb(0, 0, 0));
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    height: auto;
+    width: 150px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 300px 0 -100px 230px;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+.centro{
+    background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(4, 0, 255), rgb(0, 0, 0));
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    height: auto;
+    width: 150px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0px -570px 30px;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+.card {
+    display: none;
+    position: fixed;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgb(71, 132, 255);
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    z-index: 1000;
+    text-align: center;
+}
+
+.card img {
+    max-width: 50%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    filter: drop-shadow(2px 2px 2px rgb(255, 0, 0));
+}
+.siguiente{
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.47), rgb(0, 0, 0), rgba(0, 0, 0, 0.47));
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    height: auto;
+    width: 150px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(255, 255, 255);
+}
+p{
+    font-size: 25px;
+    text-align: justify;
+    color: black;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.711);
+}
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 50%;
+    background: red;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.video{
+    height: auto;
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: 4px 4px 2px blueviolet;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        margin-top: 20px;
+        font-size: 70px;
+        text-align: center;
+    }
+    
+    #header1 {
+        margin-top: 20px;
+        font-size: 40px;
+        text-align: center;
+    }
+    body::before {
+        width: 100vw;
+        height: 100vh;
+        background: url('flor.png');
+        filter: drop-shadow(2px 4px 8px rgb(255, 255, 255));
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
+        content: "";
+        position: fixed;
+        top: 30px;
+    }
+    .izquierda {
+        background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(4, 0, 255), rgb(0, 0, 0));
+        border-radius: 12px;
+        margin-left: 15px;
+        margin-top: 350px;
+        border: none;
+        padding: 10px;
+        height: auto;
+        width: auto;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    }
+    .derecha {
+        background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(4, 0, 255), rgb(0, 0, 0));
+        border-radius: 12px;
+        margin-left: 280px;
+        margin-top: -50px;
+        border: none;
+        padding: 10px;
+        height: auto;
+        width: 70px;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    }
+    .centro {
+        background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(4, 0, 255), rgb(0, 0, 0));
+        border-radius: 12px;
+        margin-left: -210px;
+        margin-top: -50px;
+        border: none;
+        padding: 10px;
+        height: auto;
+        width: 80px;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        box-shadow: 2px 2px 2px rgb(255, 255, 255);
+    }    
+    .card img {
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        filter: drop-shadow(2px 2px 2px rgb(255, 0, 0));
+    }
+    .card {
+        height: auto;
+        width: 310px;
+    }
+    p{
+        font-size: 18px;
+        text-align: justify;
+        color: black;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.711);
+    }
+    .cerrar {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 15px;
+    }
+    .video{
+        height: auto;
+        width: 280px;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px white;
+    }
+    
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="cleartype" content="on">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <title>💞Daniela💞</title>
+        <link rel="icon" href="Dfondo.png" type="image/png">
+        <link rel="stylesheet" type="text/css" href="Daniela.css">
+    </head>
+    
+    <body>
+        <div id="header">🌹Dani🌹</div>
+        <div id="header1">🖤¡Reina!🖤</div>
+
+        <div class="popup-overlay">
+            <div class="popup-content">
+                <h1>De: Andrés<br>Para: Mi Mor<br>😍</h1>
+                <form id="login-form">
+                    <input type="text" id="username" placeholder="Usuario">
+                    <br>
+                    <input type="password" id="password" placeholder="Contraseña">
+                    <br>
+                    <button class="Inicio" type="submit">😍Comencemos😘</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("login-form").addEventListener("submit", function(event) {
+                event.preventDefault();
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                
+                if (username === "Daniela" && password === "20102023") {
+                    var popupOverlay = document.querySelector(".popup-overlay");
+                    popupOverlay.style.display = "none";
+                    alert("Ingresaste Amor 😄, \n¡Bienvenida Reina, esto lo cree con mucho cariño para la persona que me hace feliz!💐.");
+                } else {
+                    alert("\nTe equivocaste Amor 😢, \n\n¡Intenta de nuevo!");
+                    document.getElementById("username").value = "";
+                    document.getElementById("password").value = "";
+                }
+            });
+            var currentPopup = null;
+        </script>
+
+        <div>
+            <button class="izquierda" type="button" onclick="openCard()">💗 Amor</button>
+            <button class="derecha" type="submit" onclick="openCard2()">💞 Vida</button>
+            <button class="centro" type="submit" onclick="openCard3()">🎶 Para Ti</button>
+        </div>
+        
+        <div class="card" id="cardContainer">
+            <img src="1.png" alt="Imagen">
+            <p>Amor mío, sin tener el valor te escribí, te hablé, quise intentar conocer a tan hermosa mujer que veían mis ojos.😆</p>
+            <button class="siguiente" onclick="nextCard()">Siguiente</button>
+            <button class="cerrar" onclick="closeCard()">X</button>
+        </div>
+        
+        <script>
+            var currentCardIndex = 1;
+            
+            function openCard() {
+                var cardContainer = document.getElementById("cardContainer");
+                cardContainer.style.display = "block";
+            }
+            
+            function nextCard() {
+                var cardContainer = document.getElementById("cardContainer");
+                
+                if (currentCardIndex === 1) {
+                    cardContainer.getElementsByTagName("img")[0].src = "2.png";
+                    cardContainer.getElementsByTagName("p")[0].innerHTML = "No sé cómo, no entiendo aún el porqué, solo sé que a medida que pasaba el tiempo, te ibas convirtiendo en alguien especial para mí. 💝";
+                    currentCardIndex = 2;
+                } else if (currentCardIndex === 2) {
+                    cardContainer.getElementsByTagName("img")[0].src = "3.jpg";
+                    cardContainer.getElementsByTagName("p")[0].innerHTML = "Aun sin saber a ciencia cierta qué pasaría, te empecé a conocer, empecé a compartir a tu lado y cada día era una experiencia nueva. ❤️‍🔥";
+                    currentCardIndex = 3;
+                } else if (currentCardIndex === 3) {
+                    cardContainer.getElementsByTagName("img")[0].src = "4.png";
+                    cardContainer.getElementsByTagName("p")[0].innerHTML = "Cada día hacías que mi vida fuera mejor, más feliz, más completa. 😍";
+                    currentCardIndex = 4;
+                } else if (currentCardIndex === 4) {
+                    cardContainer.getElementsByTagName("img")[0].src = "5.png";
+                    cardContainer.getElementsByTagName("p")[0].innerHTML = "Cuando te di ese primer beso, me encantó al punto que solo deseaba conocer a tan hermosa mujer por completo. 😘";
+                    currentCardIndex = 5;
+                } else if (currentCardIndex === 5) {
+                    cardContainer.getElementsByTagName("img")[0].src = "6.png";
+                    cardContainer.getElementsByTagName("p")[0].innerHTML = "Los días siguieron pasando y cada vez era mayor la intriga que nacía en mí, saber y poder entender quién eras y por qué el gusto tan grande de estar a tu lado. 🥰";
+                    cardContainer.getElementsByTagName("button")[0].innerHTML = "Cerrar";
+                    cardContainer.getElementsByTagName("button")[0].onclick = closeCard;
+                    currentCardIndex = 6;
+                }
+            }
+            
+            function closeCard() {
+                var cardContainer = document.getElementById("cardContainer");
+                cardContainer.style.display = "none";
+                currentCardIndex = 1;
+            }
+        </script>
+        
+        <div class="card" id="cardContainer2">
+            <img src="7.png" alt="Imagen">
+            <p>Ser tuyo fue inexplicable, fue como detener el tiempo y solo estar para ti. 😏</p>
+            <button class="siguiente" onclick="nextCard2()">Siguiente</button>
+            <button class="cerrar" onclick="closeCard2()">X</button>
+        </div>
+        
+        <script>
+            var currentCardIndex2 = 1;
+            function openCard2() {
+                var cardContainer2 = document.getElementById("cardContainer2");
+                cardContainer2.style.display = "block";
+            }
+            
+            function nextCard2() {
+                var cardContainer2 = document.getElementById("cardContainer2");
+                
+                if (currentCardIndex2 === 1) {
+                    cardContainer2.getElementsByTagName("img")[0].src = "8.png";
+                    cardContainer2.getElementsByTagName("p")[0].innerHTML = "Cada momento a tu lado es único, lleno de éxtasis, de nuevas aventuras, de un deseo incontrolable. 🥺";
+                    currentCardIndex2 = 2;
+                } else if (currentCardIndex2 === 2) {
+                    cardContainer2.getElementsByTagName("img")[0].src = "9.png";
+                    cardContainer2.getElementsByTagName("p")[0].innerHTML = "Doy gracias que me contestaras ese mensaje, por dejarme conocerte, y hoy eres más que importante, eres más que mi pareja. 👩‍❤️‍👨";
+                    currentCardIndex2 = 3;
+                } else if (currentCardIndex2 === 3) {
+                    cardContainer2.getElementsByTagName("img")[0].src = "Primera.png";
+                    cardContainer2.getElementsByTagName("p")[0].innerHTML = "Eres esa mujer que me llena de alegría, de cariño, de amor; con solo verte, soy feliz, y con cada beso, mi deseo crece. 😈🤤";
+                    currentCardIndex2 = 4;
+                } else if (currentCardIndex2 === 4) {
+                    cardContainer2.getElementsByTagName("img")[0].src = "14.png";
+                    cardContainer2.getElementsByTagName("p")[0].innerHTML = "Solo quiero ser tuyo, que vivamos y seamos felices. Te adoro, mi ricura hermosa. 💘";
+                    currentCardIndex2 = 5;
+                } else if (currentCardIndex2 === 5) {
+                    cardContainer2.getElementsByTagName("img")[0].src = "15.png";
+                    cardContainer2.getElementsByTagName("p")[0].innerHTML = "Recuerda siempre que a tu lado soy plenamente feliz. 🤗";
+                    cardContainer2.getElementsByTagName("button")[0].innerHTML = "Cerrar";
+                    cardContainer2.getElementsByTagName("button")[0].onclick = closeCard2;
+                    currentCardIndex2 = 6;
+                }
+            }
+            function closeCard2() {
+                var cardContainer2 = document.getElementById("cardContainer2");
+                cardContainer2.style.display = "none";
+                currentCardIndex2 = 1;
+            }
+        </script>
+
+        <div class="card" id="cardContainer3">
+            <video class="video" width="610" height="320" controls>
+                <source src="./I Dont Want Miss a Thing.mp4" type="video/mp4">
+            </video>
+            <p>Cada minuto a tu lado es una melodía inigualable, una canción que resuena con los latidos de mi corazón, expresando todo lo que siento por ti. Siempre quiero estar a tu lado, mi amor hermoso, creando juntos la partitura eterna de nuestro Amor.⏳</p>
+            <button class="cerrar" onclick="closeCard3()">X</button>
+        </div>
+    
+        <script>
+            var currentCardIndex3 = 1;
+            var video = document.querySelector('.video');
+    
+            function openCard3() {
+                var cardContainer3 = document.getElementById("cardContainer3");
+                cardContainer3.style.display = "block";
+            }
+    
+            function closeCard3() {
+                var cardContainer3 = document.getElementById("cardContainer3");
+                cardContainer3.style.display = "none";
+                currentCardIndex3 = 1;
+                video.pause();
+                video.currentTime = 0;
+            }
+        </script>
+
+    </body>
+</html>
